@@ -19,11 +19,10 @@ export default function Routes(){
     return (
         <NavigationContainer>
             <AppStack.Navigator screenOptions={{ headerShown: false }}>
+                <AppStack.Screen name="Midias"component ={Midias}/>
                 <AppStack.Screen name="Home" component ={Home}/>
                 <AppStack.Screen name="Teams"component ={Teams}/>
-                <AppStack.Screen name="Events"component ={Events}/>
                 <AppStack.Screen name="Notices"component ={Notices}/>
-                <AppStack.Screen name="Midias"component ={Midias}/>
                 <AppStack.Screen name="Partners"component ={Partners}/>
                 <AppStack.Screen name="Notifications"component ={Notifications}/>
                 <AppStack.Screen name="Athletes"component ={Athletes}/>

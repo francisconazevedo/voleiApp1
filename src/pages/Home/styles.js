@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
 
+
 export default StyleSheet.create({
     container: {
         flex: 1,
@@ -15,7 +16,7 @@ export default StyleSheet.create({
     },
 
     headerText: {
-        fontSize: 15, 
+        fontSize: 22, 
         color: '#737380'
     },
 
