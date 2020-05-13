@@ -1,30 +1,38 @@
 import React from 'react'; 
 import { Feather } from '@expo/vector-icons'
-import { View, Image,  TouchableOpacity } from 'react-native'
+import { View, Image, Text, TouchableOpacity } from 'react-native'
 import styles from './styles.js';
+import logoImg from '../../assets/icon.png';
 import { ScrollView } from 'react-native-gesture-handler';
 import { Button, ListItem } from 'react-native-elements';
+
+import { useNavigation, useRoute } from '@react-navigation/native'
 
 
 
 export default function Teams() {
+    const navigate = useNavigation();
+    const route = useRoute();
+
+    const team = route.params.team;
+    function navigateBack(){
+        navigate.goBack()
+    }
+
     return (
-        <View>
-           <View style={styles.header}>
-                <Image source={logoImg} onPress={navigateToTeams}/>
+        <View style={styles.container}>
+            <View style={styles.header}>
+                <Image source={logoImg}/>
                 <Text style={styles.headerText}>
                     {team.name}
                 </Text>
-                <Feather name='arrow-left' size={20} color="blue" />
+                <TouchableOpacity onPress={navigateBack}>
+                    <Feather name='arrow-left' size={20} color="#48619D" />
+                </TouchableOpacity>
+                
             </View> 
-            <ScrollView style={ styles.card}>
-                <ListItem 
-                    key={i}
-                    leftAvatar={ { source: { uri: l.avatar_url } }}
-                    title={l.name}
-                    subtitle={l.subtitle}
-                    bottomDivider/>
-            </ScrollView>
+           
+            
         </View>
         
     )

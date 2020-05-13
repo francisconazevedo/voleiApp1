@@ -12,7 +12,7 @@ class MoreData extends Component{
                 borderColor: '#dddddd' }}>
                     <View style={{flex:2}}>
                         <Image source={this.props.imageUri}
-                         style={{ width: 90, height: 60}}
+                         style={{ width: 80, height: 60}}
                         />
                     </View>
                     
