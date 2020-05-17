@@ -40,12 +40,13 @@ export default function Notices() {
                 <Feather name='arrow-left' size={20} color="#48619D" />
                 </TouchableOpacity>
             </View> 
+            
             <View >
                 {notices.map((notice)=> 
                 <Card key={notice.id}
-                    image={notice.photo != null ? 
+                    image={{ uri:  notice.photo != null ? 
                         "http://volei.wetech.com.br/" + notice.photo_dir + notice.photo : 
-                        defaultImage}>
+                        defaultImage }}>
                     <Text style={{marginBottom: 10}}>
                         {notice.description}
                     </Text>
