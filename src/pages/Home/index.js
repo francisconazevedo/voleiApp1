@@ -62,10 +62,8 @@ export default function Home() {
                     <Image source={logoImg} onPress={navigateToTeams} />
                     <Text style={styles.headerText}>
                         TeamViniVôlei
-                </Text>
-                    <Button
-                        title="Login"
-                    />
+                </Text>         
+                    
                 </View>
 
                 <Text style={styles.title}>
