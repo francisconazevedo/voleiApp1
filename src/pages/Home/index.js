@@ -12,16 +12,21 @@ import { Button, ListItem } from 'react-native-elements';
 
 import styles from './styles.js';
 import { TouchableOpacity } from 'react-native-gesture-handler';  
+import { userActions } from '../../actions/user.actions';
 
 import api from '../../services/api';
-
+import {useSelector} from 'react-redux';
 
 export default function Home() {
     const [teams, setTeams] = useState([]);
     const [events, setEvents] = useState([]);
+    const {user} = useSelector(state => ({user:state.user}));
+    console.log(user)
+
     useEffect(() => {
-        loadTeams()
-        loadEvents()
+        loadTeams();
+        loadEvents();
+        userActions.login("","");
     }, []);
 
     async function loadTeams() {
