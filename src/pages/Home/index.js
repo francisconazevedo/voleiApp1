@@ -67,10 +67,8 @@ export default function Home() {
                     <Image source={logoImg} onPress={navigateToTeams} />
                     <Text style={styles.headerText}>
                         TeamViniVôlei
-                </Text>
-                    <Button
-                        title="Login"
-                    />
+                </Text>         
+                    
                 </View>
 
                 <Text style={styles.title}>
@@ -81,7 +79,7 @@ export default function Home() {
                         {teams.map((team) =>
                             <TouchableOpacity key={team.id} onPress={() => navigateToTeams(team)}>
                                 <Teams imageUri={ team.photo != null ? 
-                                    "http://volei.wetech.com.br/" + team.photo_dir + team.photo : 
+                                    team.photo_dir + team.photo : 
                                     defaultShield } 
                                     name={team.name} />
                             </TouchableOpacity>

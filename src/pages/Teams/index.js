@@ -51,10 +51,6 @@ export default function Teams() {
             </View> 
             <ScrollView style={{marginBottom: 60}}>
 
-            <Text>
-                    {team.description}
-            </Text>
-
             <Text style={styles.title}>
                     Atletas:
             </Text>

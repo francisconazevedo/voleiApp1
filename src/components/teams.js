@@ -14,7 +14,8 @@ class Teams extends Component{
             alignItems: 'center',
              }}>
                     <View style={{flex:2}}>
-                        <Image source={this.props.imageUri}
+                        <Image source={ this.props.imageUri != 4 ? 
+                        { uri: "http://volei.wetech.com.br/" + this.props.imageUri } : this.props.imageUri }
                             style={{ 
                                 height: 90,
                                 width: 70,
@@ -22,7 +23,6 @@ class Teams extends Component{
                                 alignItems: 'center'
                             }}
                         />
-
                     </View>
                     <View style={{flex:1, paddingLeft:10, paddingTop: 10 }}>
                         <Text> {this.props.name} </Text> 
