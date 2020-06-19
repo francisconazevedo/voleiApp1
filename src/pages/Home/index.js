@@ -26,7 +26,6 @@ export default function Home() {
     useEffect(() => {
         loadTeams();
         loadEvents();
-        userActions.login("","");
     }, []);
 
     async function loadTeams() {
