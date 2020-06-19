@@ -50,6 +50,9 @@ export default function Home() {
         navigation.navigate('Notices');
     }
 
+    function navigateToLogin() {
+        navigation.navigate('Login');
+    }
 
     function navigateToPartners() {
         navigation.navigate('Partners');
@@ -67,7 +70,7 @@ export default function Home() {
                     <Text style={styles.headerText}>
                         TeamViniVôlei
                 </Text>         
-                    
+                    <Button name={'login'} onPress={navigateToLogin}>Login</Button>
                 </View>
 
                 <Text style={styles.title}>
