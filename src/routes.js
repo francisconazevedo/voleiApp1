@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 const AppStack = createStackNavigator();
 
 import Home from './pages/Home';
+import Login from './pages/Login';
 import Teams from './pages/Teams';
 import Events from './pages/Events';
 import Notices from './pages/Notices';
@@ -19,6 +20,7 @@ export default function Routes(){
     return (
         <NavigationContainer>
             <AppStack.Navigator screenOptions={{ headerShown: false }}>
+                <AppStack.Screen name="Login" component ={Login}/>
                 <AppStack.Screen name="Home" component ={Home}/>
                 <AppStack.Screen name="Midias"component ={Midias}/>
                 <AppStack.Screen name="Teams"component ={Teams}/>
